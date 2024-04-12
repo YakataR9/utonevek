@@ -6,6 +6,8 @@ class Nev:
         self.ujsz1 = ujsz1
         self.ujsz2 = ujsz2
         self.nem = nem
+    def __str__(self):
+        return f"Utónév: {self.nev}, neme: {self.nem}"
 
 utonevek = []
 
@@ -15,3 +17,5 @@ with open("utonevek/UTONEV.TXT", "rt", encoding="ansi") as f:
         sor = sor.strip().split(";")
         utonevek.append(Nev(sor[0],sor[1],sor[2],sor[3],sor[4],sor[5]))
         
+for utonev in utonevek:
+    print(utonev)  
