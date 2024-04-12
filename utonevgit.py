@@ -18,4 +18,9 @@ with open("utonevek/UTONEV.TXT", "rt", encoding="ansi") as f:
         utonevek.append(Nev(sor[0],sor[1],sor[2],sor[3],sor[4],sor[5]))
         
 for utonev in utonevek:
-    print(utonev)  
+    print(utonev) 
+
+adat = 0        
+for utonev in utonevek:
+    adat += 1
+print(adat,"utónévről található adat a forrásban") 
