@@ -7,7 +7,11 @@ class Nev:
         self.ujsz2 = ujsz2
         self.nem = nem
 
-with open("UTONEV.txt", "rt", encoding="ansi") as f:
+utonevek = []
+
+with open("utonevek/UTONEV.TXT", "rt", encoding="ansi") as f:
+    f.readline()
     for sor in f:
-        
+        sor = sor.strip().split(";")
+        utonevek.append(Nev(sor[0],sor[1],sor[2],sor[3],sor[4],sor[5]))
         
