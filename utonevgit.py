@@ -24,3 +24,19 @@ adat = 0
 for utonev in utonevek:
     adat += 1
 print(adat,"utónévről található adat a forrásban") 
+
+elsok = 0
+for sor in utonevek:
+    if sor.nem == 'F':
+        if sor.elso != "":
+            elsok += int(sor.elso)
+print(elsok,"férfiról volt adat")
+
+elsokNo = 0
+for sor in utonevek:
+    if sor.nem == 'N':
+        if sor.elso != "":
+            elsokNo += int(sor.elso)
+print(elsokNo,"nőröl volt adat")
+
+print("Összesen",elsokNo + elsok,"emberről volt adat")
